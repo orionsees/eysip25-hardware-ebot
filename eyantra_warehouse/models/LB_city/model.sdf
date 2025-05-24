@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<sdf version="1.8">
+  <model name="LB_city">
+    <static>true</static>
+    <link name="link">
+      <visual name="visual1">
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <mesh>
+            <uri>model://LB_city/meshes/LB_city.dae</uri>
+            <scale>1.1 1.1 1.1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
