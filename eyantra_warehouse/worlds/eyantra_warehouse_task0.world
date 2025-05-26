@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <sdf version="1.8">
   <world name="eyantra_world">
+    
     <!-- Required Physics Settings -->
     <physics name="1ms" type="ignored">
       <max_step_size>0.001</max_step_size>
@@ -8,9 +9,20 @@
     </physics>
 
     <!-- Essential Systems -->
-    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"/>
-    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands"/>
-    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"/>
+    <plugin
+    filename="libignition-gazebo-physics-system.so"
+    name="ignition::gazebo::systems::Physics">
+    </plugin>    
+    
+    <plugin 
+    filename="libignition-gazebo-user-commands-system.so"
+    name="ignition::gazebo::systems::UserCommands">
+    </plugin> 
+
+   <plugin 
+   filename="libignition-gazebo-scene-broadcaster-system.so"
+   name="ignition::gazebo::systems::SceneBroadcaster">
+   </plugin> 
 
     <!-- Lighting Configuration -->
     <light type="directional" name="sun">
@@ -26,6 +38,20 @@
         <quadratic>0.001</quadratic>
       </attenuation>
     </light>
+
+    <scene>
+      <shadows>false</shadows>
+      <ambient>0.5 0.5 0.5 1.0</ambient>
+      <grid>false</grid>
+      <sky>
+        <time>22</time>
+        <sunrise>20</sunrise>
+        <sunset>21</sunset>
+        <clouds>
+          <humidity>0</humidity>
+        </clouds>
+      </sky>
+    </scene>
 
     <include>
       <name>ground_plane</name>

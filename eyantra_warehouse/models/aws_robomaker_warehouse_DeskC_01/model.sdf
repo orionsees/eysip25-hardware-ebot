@@ -1,6 +1,10 @@
 <?xml version="1.0" ?>
 <sdf version="1.8">
   <model name="aws_robomaker_warehouse_DeskC_01">
+    <asset>
+      <uri>model://aws_robomaker_warehouse_DeskC_01/materials/scripts/aws_robomaker_warehouse_DeskC_01.material</uri>
+      <uri>model://aws_robomaker_warehouse_DeskC_01/materials/textures/aws_Desk_01.png</uri>
+    </asset>
     <link name="link">
       <inertial>
         <mass>1</mass>
